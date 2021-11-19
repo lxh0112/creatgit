@@ -31,7 +31,7 @@ TimingBlock {
 	TS1_0                0;
 	TS1_1                1;
 }
-
+111111111
 Pattern {
     (AllPin)
              > TS1_0            10X1XXZZZZZZZZ; //V1 S63 cycle 0 |  V1 - S:0 
