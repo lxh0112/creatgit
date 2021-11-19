@@ -1,0 +1,90 @@
+CAP 1.0;
+
+// CAP pattern converted by STIL2CAP Version 1.2.0.0
+// Date:          Nov 17 09:06:36 2021
+// Source STIL:   D:\Project\士兰项目\stil2cap_1004\trypattern\adjustmode.stil
+
+Signals {
+    P10             InOut;
+    P05             InOut;
+    P30             InOut;
+    P13             InOut;
+    P00             InOut;
+    P11             InOut;
+    P17             InOut;
+    P16             InOut;
+    P15             InOut;
+    P14             InOut;
+    P12             InOut;
+    P03             InOut;
+    P02             InOut;
+    P01             InOut;
+}
+
+SignalGroups {
+    gPINS = P10+ P05+ P30+ P13+ P00+ P11;
+    gotherPINS = P17+ P16+ P15+ P14+ P12+ P03+ P02+ P01;
+    AllPin = P10+ P05+ P30+ P13+ P00+ P11+ P17+ P16+ P15+ P14+ P12+ P03+ P02+ P01;
+}
+
+TimingBlock {
+	TS1_0                0;
+	TS1_1                1;
+}
+
+Pattern {
+    (AllPin)
+             > TS1_0            10X1XXZZZZZZZZ; //V1 S63 cycle 0 |  V1 - S:0 
+  Repeat 4999  > TS1_0            10X1XXZZZZZZZZ; //V2 S66 cycle 1-4999 |  V2 - S:1 
+  Repeat 5000  > TS1_0            00X1XXZZZZZZZZ; //V3 S69 cycle 5000-9999 |  V3 - S:5000 
+             > TS1_0            00X0XXZZZZZZZZ; //V4 S72 cycle 10000 |  V4 - S:10000 
+             > TS1_0            10X0XXZZZZZZZZ; //V5 S73 cycle 10001 |  V5 - S:10001 
+             > TS1_0            00X0XXZZZZZZZZ; //V6 S74 cycle 10002 |  V6 - S:10002 
+             > TS1_0            00X1XXZZZZZZZZ; //V7 S76 cycle 10003 |  V7 - S:10003 
+             > TS1_0            10X1XXZZZZZZZZ; //V8 S77 cycle 10004 |  V8 - S:10004 
+             > TS1_0            00X1XXZZZZZZZZ; //V9 S78 cycle 10005 |  V9 - S:10005 
+             > TS1_0            00X0XXZZZZZZZZ; //V10 S80 cycle 10006 |  V10 - S:10006 
+             > TS1_0            10X0XXZZZZZZZZ; //V11 S81 cycle 10007 |  V11 - S:10007 
+             > TS1_0            00X0XXZZZZZZZZ; //V12 S82 cycle 10008 |  V12 - S:10008 
+             > TS1_0            00X1XXZZZZZZZZ; //V13 S84 cycle 10009 |  V13 - S:10009 
+             > TS1_0            10X1XXZZZZZZZZ; //V14 S85 cycle 10010 |  V14 - S:10010 
+             > TS1_0            00X1XXZZZZZZZZ; //V15 S86 cycle 10011 |  V15 - S:10011 
+             > TS1_0            00X0XXZZZZZZZZ; //V16 S88 cycle 10012 |  V16 - S:10012 
+             > TS1_0            10X0XXZZZZZZZZ; //V17 S89 cycle 10013 |  V17 - S:10013 
+             > TS1_0            00X0XXZZZZZZZZ; //V18 S90 cycle 10014 |  V18 - S:10014 
+             > TS1_0            00X1XXZZZZZZZZ; //V19 S92 cycle 10015 |  V19 - S:10015 
+             > TS1_0            10X1XXZZZZZZZZ; //V20 S93 cycle 10016 |  V20 - S:10016 
+             > TS1_0            00X1XXZZZZZZZZ; //V21 S94 cycle 10017 |  V21 - S:10017 
+             > TS1_0            00X1XXZZZZZZZZ; //V22 S96 cycle 10018 |  V22 - S:10018 
+             > TS1_0            10X1XXZZZZZZZZ; //V23 S97 cycle 10019 |  V23 - S:10019 
+             > TS1_0            00X1XXZZZZZZZZ; //V24 S98 cycle 10020 |  V24 - S:10020 
+             > TS1_0            00X0XXZZZZZZZZ; //V25 S100 cycle 10021 |  V25 - S:10021 
+             > TS1_0            10X0XXZZZZZZZZ; //V26 S101 cycle 10022 |  V26 - S:10022 
+             > TS1_0            00X0XXZZZZZZZZ; //V27 S102 cycle 10023 |  V27 - S:10023 
+             > TS1_0            00X1XXZZZZZZZZ; //V28 S104 cycle 10024 |  V28 - S:10024 
+             > TS1_0            10X1XXZZZZZZZZ; //V29 S105 cycle 10025 |  V29 - S:10025 
+             > TS1_0            00X1XXZZZZZZZZ; //V30 S106 cycle 10026 |  V30 - S:10026 
+             > TS1_0            00X0XXZZZZZZZZ; //V31 S108 cycle 10027 |  V31 - S:10027 
+             > TS1_0            10X0XXZZZZZZZZ; //V32 S109 cycle 10028 |  V32 - S:10028 
+             > TS1_0            00X0XXZZZZZZZZ; //V33 S110 cycle 10029 |  V33 - S:10029 
+             > TS1_0            00X0XXZZZZZZZZ; //V34 S112 cycle 10030 |  V34 - S:10030 
+             > TS1_0            10X0XXZZZZZZZZ; //V35 S113 cycle 10031 |  V35 - S:10031 
+             > TS1_0            00X0XXZZZZZZZZ; //V36 S114 cycle 10032 |  V36 - S:10032 
+             > TS1_0            00X1XXZZZZZZZZ; //V37 S116 cycle 10033 |  V37 - S:10033 
+             > TS1_0            10X1XXZZZZZZZZ; //V38 S117 cycle 10034 |  V38 - S:10034 
+             > TS1_0            00X1XXZZZZZZZZ; //V39 S118 cycle 10035 |  V39 - S:10035 
+             > TS1_0            00X1XXZZZZZZZZ; //V40 S120 cycle 10036 |  V40 - S:10036 
+             > TS1_0            10X1XXZZZZZZZZ; //V41 S121 cycle 10037 |  V41 - S:10037 
+             > TS1_0            00X1XXZZZZZZZZ; //V42 S122 cycle 10038 |  V42 - S:10038 
+             > TS1_0            00X1XXZZZZZZZZ; //V43 S124 cycle 10039 |  V43 - S:10039 
+             > TS1_0            10X1XXZZZZZZZZ; //V44 S125 cycle 10040 |  V44 - S:10040 
+             > TS1_0            00X1XXZZZZZZZZ; //V45 S126 cycle 10041 |  V45 - S:10041 
+             > TS1_0            00X1XXZZZZZZZZ; //V46 S128 cycle 10042 |  V46 - S:10042 
+             > TS1_0            10X1XXZZZZZZZZ; //V47 S129 cycle 10043 |  V47 - S:10043 
+             > TS1_0            00X1XXZZZZZZZZ; //V48 S130 cycle 10044 |  V48 - S:10044 
+             > TS1_0            00X1XXZZZZZZZZ; //V49 S132 cycle 10045 |  V49 - S:10045 
+             > TS1_0            10X1XXZZZZZZZZ; //V50 S133 cycle 10046 |  V50 - S:10046 
+             > TS1_0            00X1XXZZZZZZZZ; //V51 S134 cycle 10047 |  V51 - S:10047 
+             > TS1_0            00H1HHZZZZZZZZ; //V52 S136 cycle 10048 |  V52 - S:10048 
+             > TS1_1            01XXXXZZZZZZZZ; //V53 S139 cycle 10049 |  V53 - S:10049 
+}
